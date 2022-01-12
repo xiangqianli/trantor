@@ -55,3 +55,4 @@ class TRANTOR_EXPORT Resolver
     static bool isCAresUsed();
 };
 }  // namespace trantor
+

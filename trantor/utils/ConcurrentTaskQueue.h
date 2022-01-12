@@ -45,15 +45,15 @@ class TRANTOR_EXPORT ConcurrentTaskQueue : public TaskQueue
      *
      * @param task
      */
-    virtual void runTaskInQueue(const std::function<void()> &task);
-    virtual void runTaskInQueue(std::function<void()> &&task);
+    virtual void runTaskInQueue(const std::function<void()> &task) override;
+    virtual void runTaskInQueue(std::function<void()> &&task) override;
 
     /**
      * @brief Get the name of the queue.
      *
      * @return std::string
      */
-    virtual std::string getName() const
+    virtual std::string getName() const override
     {
         return queueName_;
     };

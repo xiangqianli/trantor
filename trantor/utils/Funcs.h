@@ -20,7 +20,7 @@ namespace trantor
 inline uint64_t hton64(uint64_t n)
 {
     static const int one = 1;
-    static const char sig = *(char *)&one;
+    static const char sig = *(const char *)&one;
     if (sig == 0)
         return n;  // for big endian machine just return the input
     char *ptr = reinterpret_cast<char *>(&n);
