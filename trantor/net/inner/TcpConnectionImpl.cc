@@ -144,7 +144,7 @@ inline bool verifyCommonName(X509 *cert, const std::string &hostname)
 inline bool verifyAltName(X509 *cert, const std::string &hostname)
 {
     bool good = false;
-    auto altNames = static_cast<const struct stack_st_GENERAL_NAME *>(
+    auto altNames = static_cast<struct stack_st_GENERAL_NAME *>(
         X509_get_ext_d2i(cert, NID_subject_alt_name, nullptr, nullptr));
 
     if (altNames)
