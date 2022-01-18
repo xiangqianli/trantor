@@ -60,3 +60,4 @@ class NormalResolver : public Resolver,
     std::vector<char> resolveBuffer_;
 };
 }  // namespace trantor
+
