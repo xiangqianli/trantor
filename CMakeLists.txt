@@ -125,12 +125,6 @@ if(WIN32)
       trantor/utils/WindowsSupport.h)
 endif(WIN32)
 
-find_package(OpenSSL)
-if(OpenSSL_FOUND)
-  target_link_libraries(${PROJECT_NAME} PRIVATE OpenSSL::SSL OpenSSL::Crypto)
-  target_compile_definitions(${PROJECT_NAME} PRIVATE USE_OPENSSL)
-endif()
-
 set(HAVE_C-ARES NO)
 if (BUILD_C-ARES)
     find_package(c-ares)
